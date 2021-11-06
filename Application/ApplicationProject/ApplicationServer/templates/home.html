@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Austin Housing ML Models</title>
+    </head>
+    <body>
+        <h1>Austin Housing ML Models</h1>
+        <br />
+        This is our home page!
+        <br />
+        <br />
+
+        <form action="{% url 'linregress' %}" >
+            <button>Linear Regression</button>
+        </form>
+        <form action="{% url 'polyregress' %}" >
+            <button>Polynomial Regression</button>
+        </form>
+        <form action="{% url 'neuraln' %}" >
+            <button>Neural Network</button>
+        </form>
+    </body>
+</html>
