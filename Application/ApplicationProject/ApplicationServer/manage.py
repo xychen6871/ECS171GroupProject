@@ -4,7 +4,10 @@ import os
 import sys
 
 # Used this tutorial to setup: https://www.youtube.com/watch?v=zcALUNZNBUk
-
+# https://www.bootstrapcdn.com/
+# https://getbootstrap.com/docs/4.0/components/buttons/
+# https://getbootstrap.com/docs/4.0/layout/grid/
+# https://www.w3schools.com/html/html_links.asp
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ApplicationServer.settings')
