@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        This is my home page
+
+
+
+            {% csrf_token %}
+            <table id="tblMain">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>R&D</th>
+                        <th>Administration</th>
+                        <th>Marketing</th>
+                        <th>State</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if d %}
+                    {% for i in d %}
+                        <tr>
+                            <td>{{i.index}}</td>
+                            <td>{{i.RD_Spend}}</td>
+                            <td>{{i.Administration}}</td>
+                            <td>{{i.Marketing_Spend}}</td>
+                            <td>{{i.State}}</td>
+                            <td style=""><button id="btn{{i.index}}" value="{{i.RD_Spend}}|{{i.Administration}}|{{i.Marketing_Spend}}|{{i.State}}">Choose</button></td>
+                        </tr>
+                    {% endfor %}
+                    {% endif %}
+                </tbody>
+
+            </table>
+        <br />
+        <form action="{% url 'result' %}">
+            <table>
+                <tr>
+                    <td>RD_Spend</td>
+                    <td>
+                        <input id="rd" readonly type="text" required name="RD"> <br/> <br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Administration</td>
+                    <td>
+                        <input id="admin" readonly type="text" required name="Admin"> <br/> <br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Marketing_Spend</td>
+                    <td>
+                        <input id="market" readonly type="text" required name="Market"> <br/> <br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <input id="state" readonly type="text" required name="State"> <br/> <br/>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="submit">
+        </form>
+        <script>
+            {% if d %}
+            {% for i in d %}
+                tempButton = document.getElementById("btn{{i.index}}");
+                tempButton.addEventListener('click', chooseButton);
+            {% endfor %}
+            {% endif %}
+
+            function chooseButton(event)
+            {
+                var d = event.target.attributes.value.nodeValue;
+                values = d.split('|');
+                var rd = document.getElementById("rd");
+                rd.value = values[0];
+
+                var admin = document.getElementById("admin");
+                admin.value = values[1];
+
+                var market = document.getElementById("market");
+                market.value = values[2];
+
+                var state = document.getElementById("state");
+                state.value = values[3];
+            }
+        </script>
+    </body>
+</html>
