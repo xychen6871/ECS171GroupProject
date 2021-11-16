@@ -16,6 +16,111 @@
                         <button class="btn btn-secondary">Home</button>
                     </form>
                 </div>
+                <label for = "Polynomial Degree">Degree (Between 2 and 10)</label>
+                <input type = "range" value = "3" id = "degree" name = "Polynomial Degree" min = "2" max = "10" step = "1" oninput="document.getElementById('degreeOut').value = this.value">
+                <br/>
+                <table id = "polyTable">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Number of Bathrooms</th>
+                            <th>Average School Rating</th>
+                            <th>Number of Bedrooms</th>
+                            <th>Number of High Schools</th>
+                            <th>Median Students Per Teacher</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%if d %}
+                        {% for i in d %}
+                            <tr>
+                                <td>{{i.index}}</td>
+                                <td>{{i.numOfBathrooms}}</td>
+                                <td>{{i.avgSchoolRating}}</td>
+                                <td>{{i.numOfBedrooms}}</td>
+                                <td>{{i.numOfHighSchools}}</td>
+                                <td>{{i.MedianStudentsPerTeacher}}</td>
+                                <td style = ""><button id = "btn{{i.index}}" value = "{{i.index}}|{{i.numOfBathrooms}}|{{i.avgSchoolRating}}|{{i.numOfBedrooms}}|{{i.numOfHighSchools}}|{{i.MedianStudentsPerTeacher}}">Choose</button></td>
+                            </tr>
+                        {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            <br />
+            <form action = "{% url 'polyResults' %}">
+                <table>
+                    <tr>
+                        <td>Degree</td>
+                        <td>
+                            <input id="degreeOut" value = "3" readonly type="text" required name="DEGREE"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Index</td>
+                        <td>
+                            <input id="index" readonly type="text" required name="INDEX"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Bathrooms</td>
+                        <td>
+                            <input id="bathrooms" readonly type="text" required name="BATHROOMS"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Average School Rating</td>
+                        <td>
+                            <input id="schoolRating" readonly type="text" required name="SCHOOLRATING"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Bedrooms</td>
+                        <td>
+                            <input id="bedrooms" readonly type="text" required name="BEDROOMS"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of High Schools</td>
+                        <td>
+                            <input id="highschools" readonly type="text" required name="HIGHSCHOOLS"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Median Students Per Teacher</td>
+                        <td>
+                            <input id="teachers" readonly type="text" required name="TEACHERS"> <br/><br/>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="submit">
+            </form>
+            <script>
+                {% if d %}
+                {% for i in d %}
+                    tempButton = document.getElementById("btn{{i.index}}");
+                    tempButton.addEventListener('click', chooseButton);
+                {% endfor %}
+                {% endif %}
+    
+                function chooseButton(event)
+                {
+                    var d = event.target.attributes.value.nodeValue;
+                    value = d.split('|');
+                    var index = document.getElementById("index");
+                    index.value = value[0];
+                    var bathroom = document.getElementById("bathrooms");
+                    bathroom.value = value[1];
+                    var schoolRating = document.getElementById("schoolRating");
+                    schoolRating.value = value[2];
+                    var bedrooms = document.getElementById("bedrooms");
+                    bedrooms.value = value[3];
+                    var highschools = document.getElementById("highschools");
+                    highschools.value = value[4];
+                    var teachers = document.getElementById("teachers");
+                    teachers.value = value[5];
+                }
+            </script>
             </div>
         </div>
     </body>

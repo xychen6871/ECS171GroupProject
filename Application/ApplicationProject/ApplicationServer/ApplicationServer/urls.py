@@ -20,7 +20,12 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
+    path('linearChoice', views.linearChoice, name="linearChoice"),
     path('linregress', views.linregress, name="linregress"),
+    path('linearResults', views.linearResults, name="linearResults"),
+    path('multiregress', views.multiregress, name="multiregress"),
+    path('multiResults', views.multiResults, name="multiResults"),
     path('polyregress', views.polyregress, name="polyregress"),
+    path('polyResults', views.polyResults, name="polyResults"),
     path('neuraln', views.neuraln, name="neuraln")
 ]
