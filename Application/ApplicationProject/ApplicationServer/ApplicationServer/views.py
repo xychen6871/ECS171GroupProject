@@ -11,7 +11,8 @@ def linearChoice(request):
     return render(request, "linearChoice.html")
 
 def linregress(request):
-    X_test = pd.read_csv("ModelFiles/Linear_X_test")
+    test = pd.read_csv("ModelFiles/Linear_test.csv")
+    X_test = test[["livingAreaSqFt"]]
     X_test = X_test.sample(n=10)
     json_records = X_test.reset_index().to_json(orient='records')
 
@@ -22,20 +23,19 @@ def linregress(request):
 
 def linearResults(request):
     linear_model = joblib.load("ModelFiles/LinearModel.sav")
-    #scale = joblib.load("ModelFiles/scaler.sav")
-    y_test = pd.read_csv("ModelFiles/Linear_y_test")
+    test = pd.read_csv("ModelFiles/Linear_test.csv")
+    y_test = test[["latestPrice"]]
     
-    #y_test = y_test.to_numpy().reshape(-1,1)
     sqft = request.GET["SQFT"]
     index = int(request.GET["INDEX"])
-    y_true = y_test.at[index, '0']
+    y_true = y_test.at[index, 'latestPrice']
 
-    #sqft_scale = scale.fit_transform([[sqft]])
     yPredicted = linear_model.predict([[sqft]])
-    return render(request, "linearResults.html", {'yPredicted': yPredicted, 'y_true': y_true, 'x': sqft, 'index': index})
+    return render(request, "linearResults.html", {'yPredicted': int(yPredicted[0]), 'y_true': y_true, 'x': sqft, 'index': index})
 
 def multiregress(request):
-    X_test = pd.read_csv("ModelFiles/Multi_X_test")
+    test = pd.read_csv("ModelFiles/Multi_test.csv")
+    X_test = test[['livingAreaSqFt','numOfBathrooms', 'avgSchoolRating', 'numOfBedrooms', 'numOfHighSchools', 'MedianStudentsPerTeacher']]
     X_test = X_test.sample(n=10)
     json_records = X_test.reset_index().to_json(orient='records')
 
@@ -46,10 +46,8 @@ def multiregress(request):
 
 def multiResults(request):
     linear_model = joblib.load("ModelFiles/multi_lin_model.sav")
-    #scale = joblib.load("ModelFiles/scaler.sav")
-    y_test = pd.read_csv("ModelFiles/Multi_y_test")
-    
-    #y_test = y_test.to_numpy().reshape(-1,1)
+    test = pd.read_csv("ModelFiles/Multi_test.csv")
+    y_test = test[["latestPrice"]]
     
     index = int(request.GET["INDEX"])
     sqft = request.GET["SQFT"]
@@ -67,7 +65,8 @@ def multiResults(request):
     return render(request, "multiResults.html", {'yPredicted': int(yPredicted[0]), 'y_true': y_true, 'x': xData, 'index': index})
 
 def polyregress(request):
-    X_test = pd.read_csv("ModelFiles/Multi_X_test")
+    test = pd.read_csv("ModelFiles/Poly_test.csv")
+    X_test = test[['numOfBathrooms', 'avgSchoolRating', 'numOfBedrooms', 'numOfHighSchools', 'MedianStudentsPerTeacher']]
     X_test = X_test.sample(n=10)
     json_records = X_test.reset_index().to_json(orient='records')
 
@@ -79,7 +78,8 @@ def polyregress(request):
 def polyResults(request):
     degree = request.GET["DEGREE"]
     poly_model = joblib.load("ModelFiles/PolyModel" + degree + ".sav")
-    y_test = pd.read_csv("ModelFiles/Poly_y_test")
+    test = pd.read_csv("ModelFiles/Poly_test.csv")
+    y_test = test[["latestPrice"]]
     range = y_test.latestPrice.max() - y_test.latestPrice.min()
 
     index = int(request.GET["INDEX"])
