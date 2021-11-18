@@ -23,6 +23,7 @@
                     <thead>
                         <tr>
                             <th>Index</th>
+                            <th>Square Feet</th>
                             <th>Number of Bathrooms</th>
                             <th>Average School Rating</th>
                             <th>Number of Bedrooms</th>
@@ -36,12 +37,13 @@
                         {% for i in d %}
                             <tr>
                                 <td>{{i.index}}</td>
+                                <td>{{i.livingAreaSqFt}}</td>
                                 <td>{{i.numOfBathrooms}}</td>
                                 <td>{{i.avgSchoolRating}}</td>
                                 <td>{{i.numOfBedrooms}}</td>
                                 <td>{{i.numOfHighSchools}}</td>
                                 <td>{{i.MedianStudentsPerTeacher}}</td>
-                                <td style = ""><button id = "btn{{i.index}}" value = "{{i.index}}|{{i.numOfBathrooms}}|{{i.avgSchoolRating}}|{{i.numOfBedrooms}}|{{i.numOfHighSchools}}|{{i.MedianStudentsPerTeacher}}">Choose</button></td>
+                                <td style = ""><button id = "btn{{i.index}}" value = "{{i.index}}|{{i.livingAreaSqFt}}|{{i.numOfBathrooms}}|{{i.avgSchoolRating}}|{{i.numOfBedrooms}}|{{i.numOfHighSchools}}|{{i.MedianStudentsPerTeacher}}">Choose</button></td>
                             </tr>
                         {% endfor %}
                         {% endif %}
@@ -60,6 +62,12 @@
                         <td>Index</td>
                         <td>
                             <input id="index" readonly type="text" required name="INDEX"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Square Feet</td>
+                        <td>
+                            <input id="sqft" readonly type="text" required name="SQFT"> <br/><br/>
                         </td>
                     </tr>
                     <tr>
@@ -109,16 +117,18 @@
                     value = d.split('|');
                     var index = document.getElementById("index");
                     index.value = value[0];
+                    var sqft = document.getElementById("sqft");
+                    sqft.value = value[1];
                     var bathroom = document.getElementById("bathrooms");
-                    bathroom.value = value[1];
+                    bathroom.value = value[2];
                     var schoolRating = document.getElementById("schoolRating");
-                    schoolRating.value = value[2];
+                    schoolRating.value = value[3];
                     var bedrooms = document.getElementById("bedrooms");
-                    bedrooms.value = value[3];
+                    bedrooms.value = value[4];
                     var highschools = document.getElementById("highschools");
-                    highschools.value = value[4];
+                    highschools.value = value[5];
                     var teachers = document.getElementById("teachers");
-                    teachers.value = value[5];
+                    teachers.value = value[6];
                 }
             </script>
             </div>

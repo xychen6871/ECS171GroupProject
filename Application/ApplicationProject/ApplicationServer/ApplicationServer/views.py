@@ -66,7 +66,7 @@ def multiResults(request):
 
 def polyregress(request):
     test = pd.read_csv("ModelFiles/Poly_test.csv")
-    X_test = test[['numOfBathrooms', 'avgSchoolRating', 'numOfBedrooms', 'numOfHighSchools', 'MedianStudentsPerTeacher']]
+    X_test = test[['livingAreaSqFt', 'numOfBathrooms', 'avgSchoolRating', 'numOfBedrooms', 'numOfHighSchools', 'MedianStudentsPerTeacher']]
     X_test = X_test.sample(n=10)
     json_records = X_test.reset_index().to_json(orient='records')
 
@@ -83,13 +83,14 @@ def polyResults(request):
     range = y_test.latestPrice.max() - y_test.latestPrice.min()
 
     index = int(request.GET["INDEX"])
+    sqFt = int(request.GET["SQFT"])
     bathrooms = request.GET["BATHROOMS"]
     schoolRating = request.GET["SCHOOLRATING"]
     bedrooms = request.GET["BEDROOMS"]
     highSchools = request.GET["HIGHSCHOOLS"]
     teachers = request.GET["TEACHERS"]
 
-    xData = [bathrooms, schoolRating, bedrooms, highSchools, teachers]
+    xData = [sqFt, bathrooms, schoolRating, bedrooms, highSchools, teachers]
 
     poly = PolynomialFeatures(int(degree))
     xDataPoly = poly.fit_transform([xData])
