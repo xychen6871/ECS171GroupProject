@@ -30,3 +30,10 @@ The models used for the application were stored in the [Application/ApplicationP
 - [Neural Network Model Generation **PLACEHOLDER**](PLACEHOLDER)
 - Model save files were named _LinearModel.sav_, _multi_lin_model.sav_, and _PolyModel**X**.sav_ where **X** is the degree of the polynomial model from 2 through 10.
 - Scaler, X, and y test files are also included in the folder.
+
+### Application Citations
+- [Setting up a server with Django](https://www.youtube.com/watch?v=zcALUNZNBUk)
+- [Bootstrap CDN](https://www.bootstrapcdn.com/)
+- [Bootstrap Buttons](https://getbootstrap.com/docs/4.0/components/buttons/)
+- [Bootstrap Grid Format](https://getbootstrap.com/docs/4.0/layout/grid/)
+- [Hyperlinks in html](https://www.w3schools.com/html/html_links.asp)
