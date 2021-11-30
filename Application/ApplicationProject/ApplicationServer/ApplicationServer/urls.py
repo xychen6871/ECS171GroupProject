@@ -19,7 +19,10 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # The default path is the home page
     path('', views.home, name="home"),
+
+    # Link the html page rendering functions to the correct paths
     path('linearChoice', views.linearChoice, name="linearChoice"),
     path('linregress', views.linregress, name="linregress"),
     path('linearResults', views.linearResults, name="linearResults"),

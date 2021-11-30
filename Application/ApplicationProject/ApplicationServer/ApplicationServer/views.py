@@ -4,12 +4,15 @@ import pandas as pd
 import json
 from sklearn.preprocessing import PolynomialFeatures
 
+# Return the home html page when requested. There are no parameters that need to be passed as context.
 def home(request):
     return render(request, "home.html")
 
+# Return the linear model selection html page when requested. There are no parameters that need to be passed as context.
 def linearChoice(request):
     return render(request, "linearChoice.html")
 
+# Return the simple linear regression page with the test data as context.
 def linregress(request):
     test = pd.read_csv("ModelFiles/Linear_test.csv")
     X_test = test[["livingAreaSqFt"]]
@@ -21,6 +24,7 @@ def linregress(request):
     context = {'d': data}
     return render(request, "linregress.html", context)
 
+# Return the simple linear regression results html page, using the results of our model prediction as the context parameter.
 def linearResults(request):
     linear_model = joblib.load("ModelFiles/LinearModel.sav")
     test = pd.read_csv("ModelFiles/Linear_test.csv")
@@ -33,6 +37,7 @@ def linearResults(request):
     yPredicted = linear_model.predict([[sqft]])
     return render(request, "linearResults.html", {'yPredicted': int(yPredicted[0]), 'y_true': y_true, 'x': sqft, 'index': index})
 
+# Return the multiple linear regression page with the test data as context.
 def multiregress(request):
     test = pd.read_csv("ModelFiles/Multi_test.csv")
     X_test = test[['livingAreaSqFt','numOfBathrooms', 'avgSchoolRating', 'numOfBedrooms', 'numOfHighSchools', 'MedianStudentsPerTeacher']]
@@ -44,6 +49,7 @@ def multiregress(request):
     context = {'d': data}
     return render(request, "multiregress.html", context)
 
+# Return the multiple linear regression results html page, using the results of our model prediction as the context parameter.
 def multiResults(request):
     linear_model = joblib.load("ModelFiles/multi_lin_model.sav")
     test = pd.read_csv("ModelFiles/Multi_test.csv")
@@ -64,6 +70,7 @@ def multiResults(request):
     yPredicted = linear_model.predict([xData])
     return render(request, "multiResults.html", {'yPredicted': int(yPredicted[0]), 'y_true': y_true, 'x': xData, 'index': index})
 
+# Return the polynomial regression page with the test data as context.
 def polyregress(request):
     test = pd.read_csv("ModelFiles/Poly_test.csv")
     X_test = test[['livingAreaSqFt', 'numOfBathrooms', 'avgSchoolRating', 'numOfBedrooms', 'numOfHighSchools', 'MedianStudentsPerTeacher']]
@@ -75,6 +82,7 @@ def polyregress(request):
     context = {'d': data}
     return render(request, "polyregress.html", context)
 
+# Return the polynomial regression results html page, using the results of our model prediction as the context parameter.
 def polyResults(request):
     degree = request.GET["DEGREE"]
     poly_model = joblib.load("ModelFiles/PolyModel" + degree + ".sav")

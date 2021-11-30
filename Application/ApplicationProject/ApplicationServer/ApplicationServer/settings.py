@@ -54,6 +54,7 @@ ROOT_URLCONF = 'ApplicationServer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # Added "templates" as a directory to search for templates
         'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
