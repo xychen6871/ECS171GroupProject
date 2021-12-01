@@ -37,3 +37,7 @@ The models used for the application were stored in the [Application/ApplicationP
 - [Bootstrap Buttons](https://getbootstrap.com/docs/4.0/components/buttons/)
 - [Bootstrap Grid Format](https://getbootstrap.com/docs/4.0/layout/grid/)
 - [Hyperlinks in html](https://www.w3schools.com/html/html_links.asp)
+- [Dataframe to html with Django](https://www.geeksforgeeks.org/rendering-data-frame-to-html-template-in-table-view-using-django-framework/)
+- [Submitting table data to Django back-end](https://stackoverflow.com/questions/56863105/how-do-i-pass-table-data-from-a-template-over-to-django-on-a-button-submit-click)
+- [Test Application startup data](https://www.kaggle.com/karthickveerakumar/startup-logistic-regression)
+- [Creating readonly text fields](https://stackoverflow.com/questions/35659178/prevent-typing-in-text-field-input-even-though-field-is-not-disabled-read-only)
