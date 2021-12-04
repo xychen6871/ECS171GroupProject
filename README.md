@@ -2,7 +2,7 @@
 
 ## Report
 
-Our report can be found at [Report/**"PLACEHOLDER"**](https://github.com/xychen26/ECS171GroupProject/blob/main/Report/Report_(under_construction).ipynb).
+Our report can be found at [Report/Report.pdf](https://github.com/xychen26/ECS171GroupProject/blob/main/Report/report.pdf).
 
 Parts of our report used data and code from the following sources:
 - The correlation analysis used information gathered from [correlationAnalysis.ipynb](https://github.com/xychen26/ECS171GroupProject/blob/main/correlationAnalysis.ipynb)
