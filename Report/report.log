@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.12.4)  4 DEC 2021 10:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.12.4)  4 DEC 2021 11:12
 entering extended mode
 **./report.tex
 (report.tex
@@ -6,8 +6,8 @@ LaTeX2e <2021-11-15>
 L3 programming layer <2021-11-22>
 (C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count183
 \c@section=\count184
@@ -53,42 +53,187 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks18
 \@floatcapt=\box51
 )
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen141
+\Hy@linkcounter=\count192
+\Hy@pagecounter=\count193
+ (C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref-langp
+atches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count194
+ (C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count195
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen142
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count196
+\Field@Width=\dimen143
+\Fld@charsize=\dimen144
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count197
+\c@Item=\count198
+\c@Hfootnote=\count199
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count266
+\c@bookmark@seq@number=\count267
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip49
+)
 (C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count192
+\l__color_backend_stack_int=\count268
 \l__pdf_internal_box=\box52
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 (C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count193
-\scratchdimen=\dimen141
+\scratchcounter=\count269
+\scratchdimen=\dimen145
 \scratchbox=\box53
-\nofMPsegments=\count194
-\nofMParguments=\count195
+\nofMPsegments=\count270
+\nofMParguments=\count271
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count196
-\MPscratchDim=\dimen142
-\MPnumerator=\count197
-\makeMPintoPDFobject=\count198
+\MPscratchCnt=\count272
+\MPscratchDim=\dimen146
+\MPnumerator=\count273
+\makeMPintoPDFobject=\count274
 \everyMPtoPDFconversion=\toks20
 )
 (C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -101,77 +246,124 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Package hyperref Info: Link coloring OFF on input line 5.
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\2buil\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count275
+)
+LaTeX Info: Redefining \ref on input line 5.
+LaTeX Info: Redefining \pageref on input line 5.
+LaTeX Info: Redefining \nameref on input line 5.
+ (report.out) (report.out)
+\@outlinefile=\write3
+\openout3 = `report.out'.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 8.
+(Font)              <14.4> on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 8.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 8.
+(Font)              <7> on input line 10.
  [1
 
-{C:/Users/2buil/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Overfull \hbox (59.3619pt too wide) in paragraph at lines 30--31
-\OT1/cmr/m/n/10 Our dataset is from kag-gle.com URL: https://www.kaggle.com/eri
+{C:/Users/2buil/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
+Overfull \hbox (84.94786pt too wide) in paragraph at lines 31--32
+\OT1/cmr/m/n/12 Our dataset is from kag-gle.com URL: https://www.kaggle.com/eri
 cpierce/austinhousingprices
  []
 
-<fig1.png, id=9, 179.16937pt x 118.94438pt>
+<fig1.png, id=71, 179.16937pt x 118.94438pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 36.
-(pdftex.def)             Requested size: 172.5pt x 114.52469pt.
-[2]
-<fig2.png, id=13, 422.32782pt x 160.34906pt>
+Package pdftex.def Info: fig1.png  used on input line 37.
+(pdftex.def)             Requested size: 195.0pt x 129.46165pt.
+[3 <./fig1.png>]
+<fig2.png, id=76, 422.32782pt x 160.34906pt>
 File: fig2.png Graphic file (type png)
 <use fig2.png>
-Package pdftex.def Info: fig2.png  used on input line 46.
-(pdftex.def)             Requested size: 345.0pt x 130.99283pt.
-<fig3.png, id=14, 436.63126pt x 371.13657pt>
+Package pdftex.def Info: fig2.png  used on input line 47.
+(pdftex.def)             Requested size: 390.0pt x 148.07832pt.
+
+Overfull \hbox (2.95982pt too wide) in paragraph at lines 50--51
+\OT1/cmr/m/n/12 Bed-rooms, -0.2 for nu-mOfHigh-Schools, and 0.2 for me-di-anStu
+-dent-PerTeacher.
+ []
+
+<fig3.png, id=77, 436.63126pt x 371.13657pt>
 File: fig3.png Graphic file (type png)
 <use fig3.png>
 Package pdftex.def Info: fig3.png  used on input line 54.
-(pdftex.def)             Requested size: 345.0pt x 293.2513pt.
- [3 <./fig1.png> <./fig2.png>]
-Overfull \hbox (16.72804pt too wide) in paragraph at lines 57--57
-[]\OT1/cmr/bx/n/14.4 Proposed Method-ol-ogy and Data Pre-processing 
+(pdftex.def)             Requested size: 390.0pt x 331.49974pt.
+[4 <./fig2.png>]
+Overfull \hbox (44.07382pt too wide) in paragraph at lines 57--57
+[]\OT1/cmr/bx/n/17.28 Proposed Method-ol-ogy and Data Pre-processing 
  []
 
-[4 <./fig3.png>]
-Overfull \hbox (37.30641pt too wide) in paragraph at lines 63--64
-\OT1/cmr/m/n/10 rooms, livin-gAr-eaSqFt, nu-mOf-Bed-rooms, avgSchool-Rat-ing, M
-e-di-anStu-dentsPerTeacher,
- []
-
-[5]
-<fig4.png, id=25, 423.08063pt x 133.24782pt>
+[5 <./fig3.png>] [6]
+<fig4.png, id=91, 423.08063pt x 133.24782pt>
 File: fig4.png Graphic file (type png)
 <use fig4.png>
 Package pdftex.def Info: fig4.png  used on input line 84.
-(pdftex.def)             Requested size: 345.0pt x 108.66005pt.
- [6 <./fig4.png>]
-<fig5.png, id=29, 469.755pt x 82.05656pt>
+(pdftex.def)             Requested size: 390.0pt x 122.83345pt.
+ [7] [8 <./fig4.png>]
+<fig5.png, id=101, 469.755pt x 82.05656pt>
 File: fig5.png Graphic file (type png)
 <use fig5.png>
 Package pdftex.def Info: fig5.png  used on input line 98.
-(pdftex.def)             Requested size: 345.0pt x 60.26389pt.
- [7 <./fig5.png>] [8] (report.aux) ) 
+(pdftex.def)             Requested size: 390.0pt x 68.12444pt.
+ [9 <./fig5.png>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 114.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 114.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 114.
+
+Overfull \hbox (27.21054pt too wide) in paragraph at lines 114--115
+\OT1/cmr/m/n/12 ited, 2019, pp. 1072{92, []$\OT1/cmtt/m/n/12 https : / / doi . 
+org / 10 . 1108 / IJHMA-[]11-[]2018-[]0095$[]\OT1/cmr/m/n/12 . 
+ []
+
+
+Overfull \hbox (47.8135pt too wide) in paragraph at lines 116--117
+\OT1/cmr/m/n/12 journals/neural-network-hyperparameter-optimization/docview/251
+4869195/se-
+ []
+
+[10]
+Overfull \hbox (65.32205pt too wide) in paragraph at lines 130--131
+\OT1/cmr/m/n/12 open-source.com. []$\OT1/cmtt/m/n/12 https : / / opensource . c
+om / article / 17 / 6 / introduction-[]latex$[]\OT1/cmr/m/n/12 . 
+ []
+
+[11] (report.aux)
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 3ABE78F2C1721D949347A7985A0CB88F;2501.
+ ) 
 Here is how much of TeX's memory you used:
- 1410 strings out of 478681
- 23386 string characters out of 2846535
- 326495 words of memory out of 3000000
- 19547 multiletter control sequences out of 15000+600000
- 407712 words of font info for 41 fonts, out of 8000000 for 9000
+ 8288 strings out of 478681
+ 132369 string characters out of 2846535
+ 431150 words of memory out of 3000000
+ 26289 multiletter control sequences out of 15000+600000
+ 408797 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,62p,1465b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\2buil\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/2buil/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/2buil/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/2buil/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/2b
-uil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report.pdf (8 pages, 594747 bytes).
+ 60i,6n,63p,1465b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\2buil\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1200.pk><C:/Users/2buil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb><C:/Users/2buil/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/2buil/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/2buil/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (11 pages, 605853 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

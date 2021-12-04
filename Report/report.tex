@@ -1,10 +1,11 @@
-\documentclass[a4paper]{article}
+\documentclass[12pt]{article}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{hyperref}
 \begin{document}
 	\title{ECS 171 Group 2 - Predicting Housing Prices in Austin, Texas}
 	\author{Jackson Gaydon et al (add the others before submitting)}
-	\date{12/5/12}
+	\date{12/5/12} 
 	\maketitle
 	
 	\section{Introduction and Background} 
@@ -49,7 +50,6 @@
 	For the floating-point values, we observed that livingAreaSqFt has the highest correlation of 0.47. The other closest correlations are 0.3 for numOfBedrooms, -0.2 for numOfHighSchools, and 0.2 for medianStudentPerTeacher. The zipcode and hometype categorical attributes were determined to not have relevant correlation with the price, so they were ignored.
 	
 	\begin{figure}[H]
-		\caption{}
 		\label{fig:fig3}
 		\includegraphics[width=1\linewidth]{fig3}
 	\end{figure}
@@ -110,6 +110,28 @@
 	
 	\section{Sources}
 	
-	
+	\begin{itemize}
+		\item Abidoye, Rotimi Boluwatife, et al. “Predicting Property Price Index Using Artificial Intelligence Techniques.” International Journal of Housing Markets and Analysis, vol. 12, no. 6, Emerald Publishing Limited, 2019, pp. 1072–92, \url{https://doi.org/10.1108/IJHMA-11-2018-0095}.
+		
+		\item Kalliola, Jussiet et al. "Neural Network Hyperparameter Optimization for Prediction of Real Estate Prices in Helsinki." PeerJ Computer Science, 2021. ProQuest, https://www.proquest.com/scholarly-journals/neural-network-hyperparameter-optimization/docview/2514869195/se-2, doi:\url{http://dx.doi.org/10.7717/peerj-cs.444}.
+		
+		\item Mangaleswaran, Shivani and Vigneshwari S. “Prediction of Housing Prices Using Machine Learning, Time Series ARIMA Model and Artificial Neural Network.” ICDSMLA 2019 : Proceedings of the 1st International Conference on Data Science, Machine Learning and Applications, vol. 601, Springer, 2020, pp. 1002–08, \url{https://doi.org/10.1007/978-981-15-1420-3_110}.	
+			
+		\item Mu, Jingyi et al. "Housing Value Forecasting Based on Machine Learning Methods", Abstract and Applied Analysis, vol. 2014, Article ID 648047, 7 pages, 2014. \url{https://doi.org/10.1155/2014/648047}.
+		
+		\item Park, Byeonghwa, and Jae Kwon Bae. “Using Machine Learning Algorithms for Housing Price Prediction: The Case of Fairfax County, Virginia Housing Data.” Expert Systems with Applications, vol. 42, no. 6, Elsevier Ltd, 2015, pp. 2928–34, \url{https://doi.org/10.1016/j.eswa.2014.11.040}.
+		
+		\item Selim, Hasan. “Determinants of House Prices in Turkey: Hedonic Regression Versus Artificial Neural Network.” Expert Systems with Applications, vol. 36, no. 2, Elsevier Ltd, 2009, pp. 2843–52, \url{https://doi.org/10.1016/j.eswa.2008.01.044}.
+	\end{itemize}
+
+	\subsection{LaTeX Document Sources}
+
+	\begin{itemize}
+		\item Cocker, Aaron. "A introduction to creating documents in LaTeX." opensource.com. \url{https://opensource.com/article/17/6/introduction-latex}.
+		\item "How to make clickable links in LaTeX." LaTeX-Tutorial.com. \url{https://latex-tutorial.com/tutorials/hyperlinks/}.
+		\item "Insert an image in LaTeX - Adding a figure or picture." LaTeX-Tutorial.com. \url{https://latex-tutorial.com/tutorials/figures/}.
+		\item "Lists." Overleaf. \url{https://www.overleaf.com/learn/latex/Lists}.
+		
+	\end{itemize}
 		
 \end{document}
