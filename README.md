@@ -9,7 +9,7 @@ Parts of our report used data and code from the following sources:
 - The simple linear regression model was developed in [Simple_LinearRegression_outlier_removed.ipynb](https://github.com/xychen26/ECS171GroupProject/blob/main/Simple_LinearRegression_outlier_removed.ipynb) and [Results for Linear Regression Models.ipynb](https://github.com/xychen26/ECS171GroupProject/blob/main/Results%20for%20Linear%20Regression%20Models.ipynb)
 - The multiple linear regression model was developed in [Multivariate_LinearRegression_outlier_removed.ipynb]() and [Results for Linear Regression Models.ipynb](https://github.com/xychen26/ECS171GroupProject/blob/main/Results%20for%20Linear%20Regression%20Models.ipynb)
 - The polynomial regression model was developed in [Polynomial Regression Data Analysis (with Outliers).ipynb](https://github.com/xychen26/ECS171GroupProject/blob/main/Polynomial%20Regression%20Data%20Analysis%20(with%20Outliers).ipynb) and [Polynomial Regression Data Analysis.ipynb](https://github.com/xychen26/ECS171GroupProject/blob/main/Polynomial%20Regression%20Data%20Analysis.ipynb)
-- The neural network model was developed in [placeholder]() and [placeholder]()
+- The neural network model was developed in [NN_Hyper_Parameter_Tuned_Filtered_v3_Jeehoon.ipynb](https://github.com/xychen26/ECS171GroupProject/blob/main/NN_Hyper_Parameter_Tuned_Filtered_v3_Jeehoon.ipynb)
 
 
 ## Application
