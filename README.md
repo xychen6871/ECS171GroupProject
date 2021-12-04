@@ -41,3 +41,4 @@ The models used for the application were stored in the [Application/ApplicationP
 - [Submitting table data to Django back-end](https://stackoverflow.com/questions/56863105/how-do-i-pass-table-data-from-a-template-over-to-django-on-a-button-submit-click)
 - [Test Application startup data](https://www.kaggle.com/karthickveerakumar/startup-logistic-regression)
 - [Creating readonly text fields](https://stackoverflow.com/questions/35659178/prevent-typing-in-text-field-input-even-though-field-is-not-disabled-read-only)
+- [Saving and Loading Keras Objects](https://stackoverflow.com/questions/67661244/how-to-pickle-weakref-in-python-tensorflow-keras?noredirect=1)
