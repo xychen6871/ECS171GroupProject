@@ -10,15 +10,16 @@
 	
 	\section{Introduction and Background} 
 	
-	For many, buying a house will be their most expensive purchase. Not only that, but it will be the greatest share of their assets and will be their greatest accumulator of wealth. As such, it can be vitally important that the house is assessed fairly. Not doing so can lead to people losing tens of thousands of dollars, if not more. A consistent and more objective way of evaluating housing prices could be hugely beneficial to homeowners and buyers, making sure that people get market value for their property.
+	For many, buying a house will be their most expensive purchase. Not only that, but it will represent a large share of their assets. As such, it can be vitally important that the house is assessed fairly. Not doing so can lead to people losing tens of thousands of dollars, if not more. A consistent and more objective way of evaluating housing prices could be hugely beneficial to homeowners and buyers, making sure that people get market value for their property.
 	
-	When it comes to trying to predict housing prices, there are a lot of factors. There are more physical ones like size and location, and then more subtle ones like local school rating and appearance. There are even fluctuations in the economy which can alter the price. While it would be an interesting avenue to explore, economic fluctuations and time-based features are out of the scope of this project. As such, we chose to stick with relatively constant features like the size and location.
-	
-	This won’t allow us to achieve the same accuracy as more sophisticated and inclusive models, but it can still provide valuable information on the relationships between these features and price. Additionally, while the model wouldn’t predict how the price changes during an economic event, two houses outputting roughly similar values from our model should have roughly the same value as economic conditions change. 
-	
-	Now, there is no one-size-fits-all model that will work for all problems. Different data has different relationships and a model that performs well on one set might struggle on another. Not only that, but more complex models, while generally capable of being more accurate, can have much greater complexity. For our project, we aim to compare different models and compare their accuracy. The models we chose to build were: linear regression, polynomial regression, and a neural network. The linear and polynomial regressions are both simpler models which can work well when data has a relationship of that sort. The neural network should do better if the data is non-linear, at the expense of being much more computationally intensive.
-	
-	With our completed models, we can use their results to check for different relationships between housing variables and house price. We can also gain insights into the viability of these models, which can pave the way for future projects which attempt to improve upon these models or test new models.
+    When it comes to trying to predict housing prices, there are a lot of factors. There are more physical ones like size and location, and then more subtle ones like school rating and appearance. There’s even fluctuations in the economy and work which can alter the price. While it would be an interesting avenue to explore, economic fluctuations are out of the scope of this project. As such, we chose to stick with relatively constant features like the size and location.
+
+    Now there is no one-size-fits-all model that will work for all problems. Different data has different relationships and a model that performs well on one set might struggle on another. Not only that, but more complex models, while generally capable of being more accurate, can be harder to interpret and take longer to train. For our project, we aim to compare different models and compare their accuracy. The models we chose to build were: linear regression, polynomial regression, and a neural network. 
+
+    We expect the linear model to perform the worst since the relationship between house features and price is not linear, but this model can set the baseline accuracy for our other models. The polynomial regression model should do much better since it can handle a much wider range of variable relationships. The neural network is expected to perform best, as neural networks are extremely strong models for non-linear data, only being held back by their costly implementation.
+
+    With completed models, we are hoping to gain insights into the relationships between housing variables and house price. We can also gain insights into the viability of these models, which can pave the way for future projects which attempt to improve upon these models or test new models.
+
 	
 	\section{Literature Review}
 		
