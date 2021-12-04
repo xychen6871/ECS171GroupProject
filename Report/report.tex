@@ -3,9 +3,9 @@
 \usepackage{float}
 \usepackage{hyperref}
 \begin{document}
-	\title{ECS 171 Group 2 - Predicting Housing Prices in Austin, Texas}
-	\author{Jackson Gaydon et al (add the others before submitting)}
-	\date{12/5/12} 
+	\title{Predicting Housing Prices in Austin, Texas}
+	\author{\small{Eric Yu, Eric Zhang, Iftekhar Munrat, Jackson Gaydon, Jacob Saunders,} \and \small{Jeehoon Kim, Manasi Vats, Nivedita Attada, Weihui Kuang,} \and \small{Will Kawamoto, and Xiang Yu Chen}}
+	\date{12/5/21} 
 	\maketitle
 	
 	\section{Introduction and Background} 
@@ -16,9 +16,9 @@
 	
 	This won’t allow us to achieve the same accuracy as more sophisticated and inclusive models, but it can still provide valuable information on the relationships between these features and price. Additionally, while the model wouldn’t predict how the price changes during an economic event, two houses outputting roughly similar values from our model should have roughly the same value as economic conditions change. 
 	
-	Now, there is no one-size-fits-all model that will work for all problems. Different data has different relationships and a model that performs well on one set might struggle on another. Not only that, but more complex models, while generally capable of being more accurate, can have much greater complexity. For our project, we aim to compare different models and compare their accuracy. The models we chose to build were: linear regression, polynomial regression, and a neural network. The linear and polynomial regressions are both simpler models which can work well when data has a relationship of that sort. The neural network should do better if the data is non-linear, at the expense of being much more computationally intensive.
+	There is no one-size-fits-all model that will work for all problems. Different data has different relationships and a model that performs well on one set might struggle on another. Not only that, but more complex models, while generally capable of being more accurate, can have much greater complexity. For our project, we aim to compare different models and compare their accuracy. With our completed models, we hope to use their results to check for different relationships between housing variables and house price. We can also gain insights into the viability of these models, which can pave the way for future projects which attempt to improve upon these models or test new models.
 	
-	With our completed models, we can use their results to check for different relationships between housing variables and house price. We can also gain insights into the viability of these models, which can pave the way for future projects which attempt to improve upon these models or test new models.
+	Our GitHub repository for this project is available at \url{https://github.com/xychen26/ECS171GroupProject}.
 	
 	\section{Literature Review}
 		
@@ -92,7 +92,7 @@
 	
 	\section{Conclusions and Discussion}
 	
-	This has yet to be written.
+	We began this project expecting to see that regression models would perform well for our dataset and problem statement, and we were not disappointed. What was surprising to us, however, was how terribly low our neural network accuracy was, especially considering how successful other projects have been with neural networks for housing price prediction. It is clear that either our dataset was not suited well for a neural network, we did not use the right features for our ANN, or the method of classification was not designed well. We believe that the last option is the most likely. If we were to continue this project, we would likely try a different approach for our neural network (use less price buckets, perhaps) or even try an SVM. For positive results, our project was certainly successful in developing regression models. It was interesting to see just how close to the true price our simple linear regression model predictions could get with just the livingAreaSqFt field. Adding the other features to the multiple linear and polynomial regression increased the accuracy of our models the way we expected. Based on the results of our regression models and correlational analysis, it is clear that the size of the housing option and the number of rooms greatly dictates the price in Austin, Texas.
 	
 	\section{Sources}
 	
