@@ -28,17 +28,9 @@
 	
 	\section{Dataset Description and Exploratory Analysis of Dataset}
 	
-	Our dataset is from kaggle.com URL: https://www.kaggle.com/ericpierce/austinhousingprices by author/provider: Eric Pierce.
+	\href{https://www.kaggle.com/ericpierce/austinhousingprices}{Dataset is from kaggle.com and provided by Eric Pierce.} 
 	
 	This dataset consists of 2018 to 2021 house transaction records from Austin, TX area. There are total 15171 samples in the dataset. Each sample has 47 attributes such as: cities, name, zip code, address, built years, amenities info, purchase price, etc. Because some of the attributes are irrelevant or difficult to deal with, we will drop some of them such as 'homeImage', 'description', etc. to make our machine learning models less complex when predicting house price. 
-	
-	\begin{figure}[H]
-		\label{fig:fig1}
-		\includegraphics[width=0.5\linewidth]{fig1}
-	\end{figure}
-	
-	
-	Most samples are evenly distributed from 2018 - 2020 along with a few samples from 2021. When we show the 'price' in a boxplot with respect to year, we see that the range of price is significantly spread out. There are many points above maximum tail, which is a sign that our dataset may not be normally distributed with respect to each year. Further exploring the housing prices, we extracted the middle 90\% of the prices, yet there were still many outliers. However, we can see the mean price for 2018 - 2020 is around 400,000 while the mean price of 2021 is little bit higher. Because we only have few samples from 2021, we couldn't tell whether inflation impacts the 2021 prices.
 	
 	The main indicator of relevant data we used was correlation to the latestPrice attribute. When we created a correlation matrix of the integer values, we saw that numOfBathrooms field has the highest correlation with price of 0.5. For the Boolean values, we saw that none of these fields were particularly noteworthy, with hasSpa having the highest correlation of 0.17.
 	
@@ -51,18 +43,16 @@
 	
 	\begin{figure}[H]
 		\label{fig:fig3}
-		\includegraphics[width=1\linewidth]{fig3}
+		\includegraphics[width=1\linewidth]{fig3recreate}
 	\end{figure}
 	
 	\section{Proposed Methodology and Data Pre-processing}
 	
-	Since our goal is to predict the housing price, we decided to use Simple Linear Regression, Multiple Linear Regression, Polynomial regression, and Artificial Neural Network (ANN) for this numerical response variables. For regression methods, the output should be continuous numerical values. We figured that regression was the right methodology for our problem statement, considering that the dataset uses continuous values that we would be unsurprised to see fit a linear or polynomial regression model. In regression training processes (both linear and polynomial), we did not scale the data except for y data to make MSE values more easily comparable between models. For our application, we kept y values unscaled in regression so that the user could see a human-readable price prediction.
+	Since our goal was to predict the housing price, we decided to use Simple Linear Regression, Multiple Linear Regression, Polynomial regression, and Artificial Neural Network (ANN) for this numerical response variables. For regression methods, the output should be continuous numerical values. We figured that regression was the right methodology for our problem statement, considering that the dataset uses continuous values that we would be unsurprised to see fit a linear or polynomial regression model. In regression training processes (both linear and polynomial), we did not scale the data except for y data to make MSE values more easily comparable between models. For our application, we kept y values unscaled in regression so that the user could see a human-readable price prediction.
 	
 	We wanted to see if a neural network could compare, however, so we planned to work on a neural network model once the regression models were finished. For the ANN model, we divided the price to several ranges of intervals to make them classification problems with meaningful predictions. In ANN training processes, scaling data is required because each neuron receives inputs from all attributes. We used a MinMaxScaler to normalize our data to value between [0,1]. Also, since the response variable latestPrice is a numerical continuous variable, this implies that we could have at most N number of different prices as N is the number of samples in the dataset. This will make ANN hard to make useful in prediction on such huge amount of numerical price. Therefor we divided the price into several range of intervals of every \$50,000 from [0 – 600,000), every \$100,000 from [600,000 – 1,000,000), \$500,000 from [1,000,000 – 2,000,000), every \$1,000,000 from [2,000,000 – 10,000,000), and then all that were above \$10,000,000 were all in one price bucket. With limited numbers of price ranges as output, the ANN models can predict, with certain values of input attributes, which price range the data point should fall into.
 	
-	When determining which features to use, we considered the information gained from the exploratory analysis section, which revealed that numOfBathrooms, livingAreaSqFt, numOfBedrooms, avgSchoolRating, MedianStudentsPerTeacher, and numOfHighSchools all had the highest correlation for latestPrice. We saw that number of stories also had high correlation, but we did not include that one. It likely would have contributed mostly to similar information that the numOfBathrooms and numOfBedrooms explained. If we were to have done principle component analysis (PCA), we would likely have included it since the PCA would have handled features that were too similar for us.
-	
-	The simple linear regression had two options for highest correlating attributes: livingAreaSqFt and numOfBathrooms. However, even though numOfBathrooms had slightly higher correlation, it had a narrower set of options (1,2, etc.) that did not have the level of detail that livingAreaSqFt since it has much higher numbers. Therefore, our simple linear regression used livingAreaSqFt. The multiple linear regression, polynomial regression, and the artificial neural network used all of the viable options of features.
+	When determining which features to use, we considered the information gained from the exploratory analysis section, which revealed that numOfBathrooms, livingAreaSqFt, numOfBedrooms, avgSchoolRating, MedianStudentsPerTeacher, and numOfHighSchools all had the highest correlation for latestPrice. We saw that number of stories also had high correlation, but we did not include that one. It likely would have contributed mostly to similar information that the numOfBathrooms and numOfBedrooms explained. If we were to have done principle component analysis (PCA), we would likely have included it since the PCA would have handled features that were too similar for us. We used livingAreaSqFt for simple linear regression while all of the other models used all of the viable features.
 	
 	\section{Experimental Results}
 	
@@ -91,16 +81,12 @@
 	
 	The artificial neural network uses the living area square footage, the number of bathrooms, the average school rating, the number of bedrooms, the number of high schools, and the median number of students per teacher, as the dependent variables. Just like before, the dependent variable is the latest price of the house. The prices themselves have been divided into 22 different ranges. The ANN itself is based off Keras' sequential model and three hidden dense layers with 100, 80, and 50 nodes and ReLu as their activation functions while the output layer uses the sigmoid function. It uses stochastic-gradient descent as its optimizer and categorical\_crossentropy as its loss function. The output layer had 17 nodes since there were 17 different price bucket classes. Unfortunately, it ended up having an accuracy of .26, roughly, which was very undesirable. We tried to make the model more accurate by making the ANN more complex, less complex, and increasing epochs, but those options either led to overfitting or underfitting which reduced our accuracy even further. After exhausting those options, the conclusion was that the ANN was simply not viable for the predictions we were attempting. Perhaps it was the amount of price buckets that we used or the features that we chose that made it very incompatible with our data, but our focus was mainly on the regression models anyway.
 	
-	\subsection{Overall Results}
+	\subsection{Overall Results and Error Analysis}
 	
 	\begin{figure}[H]
 		\label{fig:fig5}
 		\includegraphics[width=1\linewidth]{fig5}
 	\end{figure}
-
-	Overall, it seemed that the 5th-degree polynomial degression was the most effective model at measuring the correlation between the price of the house and the other independent variables, especially if the outliers are removed. The linear regression models proved less effective than the 5th-degree polynomial regression model, but still had acceptably low training and testing MSEs. Without outliers removed, the multiple linear regression had the best performance.
-	
-	\subsection{Error Analysis}
 	
 	One possible reason why the models were not as accurate as they could be is the fact that too many samples have been removed from the dataset during preprocessing. Removing too many samples reduced the sample size, which made it more difficult to properly train models. The accuracy of these models suffered as a result. Keep in mind that removing outliers from the dataset is supposed to increase the accuracy of the models, not decrease it. The fact that removing the outliers decreased the accuracy of these models indicates that too many legitimate samples have been removed from the dataset. A post-experimental analysis of the regression models showed that the percentages of samples that were removed from the dataset was 3.72\% for simple linear regression (threshold = 2), 17.26\% for multiple linear regression (threshold = 2), and 11.28\% for polynomial regression (threshold = 3). The number of actual outliers could be counted with one or two hands with the help of a scatter plot. This means most of the samples removed during preprocessing were not true outliers. To remedy this, the threshold used to remove the outliers needs to be increased so that fewer legitimate samples would be removed from the dataset. Alternately, a manual effort to remove outliers would have probably been more efficient. For now, we will simply refer to the models where outliers were not removed to be our main output of this project. 
 	
