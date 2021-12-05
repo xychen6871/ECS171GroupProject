@@ -13,9 +13,11 @@
             <div class="row justify-content-start">
                 <div class="col-sm" >
                     <form action="{% url 'home' %}" >
+                        <!-- This button should take you back to the home page -->
                         <button class="btn btn-secondary">Home</button>
                     </form>
                 </div>
+                <!-- This tabel will display test data that can be used to test the model -->
                 <table id = "linearTable">
                     <thead>
                         <tr>
@@ -30,6 +32,7 @@
                             <tr>
                                 <td>{{i.index}}</td>
                                 <td>{{i.livingAreaSqFt}}</td>
+                                <!-- This button will fill the selected data section with the chosen data -->
                                 <td style = ""><button id = "btn{{i.index}}" value = "{{i.index}}|{{i.livingAreaSqFt}}">Choose</button></td>
                             </tr>
                         {% endfor %}
@@ -38,6 +41,7 @@
                 </table>
             <br />
             <form action = "{% url 'linearResults' %}">
+                <!-- This table will display the selected data that will be sent to the model -->
                 <table>
                     <tr>
                         <td>Index</td>

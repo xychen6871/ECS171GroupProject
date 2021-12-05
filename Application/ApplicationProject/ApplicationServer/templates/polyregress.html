@@ -13,12 +13,15 @@
             <div class="row justify-content-start">
                 <div class="col-sm" >
                     <form action="{% url 'home' %}" >
+                        <!-- This button should take you back to the home page -->
                         <button class="btn btn-secondary">Home</button>
                     </form>
                 </div>
+                <!-- This slider is used to select the degree of model to be used -->
                 <label for = "Polynomial Degree">Degree (Between 2 and 10)</label>
                 <input type = "range" value = "3" id = "degree" name = "Polynomial Degree" min = "2" max = "10" step = "1" oninput="document.getElementById('degreeOut').value = this.value">
                 <br/>
+                <!-- This tabel will display test data that can be used to test the model -->
                 <table id = "polyTable">
                     <thead>
                         <tr>
@@ -43,6 +46,7 @@
                                 <td>{{i.numOfBedrooms}}</td>
                                 <td>{{i.numOfHighSchools}}</td>
                                 <td>{{i.MedianStudentsPerTeacher}}</td>
+                                <!-- This button will fill the selected data section with the chosen data -->
                                 <td style = ""><button id = "btn{{i.index}}" value = "{{i.index}}|{{i.livingAreaSqFt}}|{{i.numOfBathrooms}}|{{i.avgSchoolRating}}|{{i.numOfBedrooms}}|{{i.numOfHighSchools}}|{{i.MedianStudentsPerTeacher}}">Choose</button></td>
                             </tr>
                         {% endfor %}
@@ -51,6 +55,7 @@
                 </table>
             <br />
             <form action = "{% url 'polyResults' %}">
+                <!-- This table will display the selected data that will be sent to the model -->
                 <table>
                     <tr>
                         <td>Degree</td>

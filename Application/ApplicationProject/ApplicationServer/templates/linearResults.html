@@ -10,6 +10,7 @@
         <div class="container">
             <h1>Austin Housing Simple Linear Regression</h1>
             <br />
+            <!-- This displayes the prediction from the model along with the true value, x value, and index of the data -->
             <div class="row justify-content-start">
                 This is the prediction {{yPredicted}}
                 <br/>
@@ -20,6 +21,7 @@
                 This is the index {{index}}
                 <div class="col-sm" >
                     <form action="{% url 'linregress' %}" >
+                        <!-- This botton takes you back to the simple linear regression page -->
                         <button class="btn btn-secondary">Back</button>
                     </form>
                 </div>
