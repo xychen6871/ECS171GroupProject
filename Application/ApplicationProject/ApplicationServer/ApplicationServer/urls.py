@@ -30,5 +30,6 @@ urlpatterns = [
     path('multiResults', views.multiResults, name="multiResults"),
     path('polyregress', views.polyregress, name="polyregress"),
     path('polyResults', views.polyResults, name="polyResults"),
-    path('neuraln', views.neuraln, name="neuraln")
+    path('neuraln', views.neuraln, name="neuraln"),
+    path('neuralResults', views.neuralResults, name="neuralResults")
 ]
