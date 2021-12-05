@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Austin Housing Neural Net</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Austin Housing Neural Network</h1>
+            <br />
+            <div class="row justify-content-start">
+                <div class="col-sm" >
+                    <form action="{% url 'home' %}" >
+                        <!-- This button should take you back to the home page -->
+                        <button class="btn btn-secondary">Home</button>
+                    </form>
+                </div>
+                <!-- This tabel will display test data that can be used to test the model -->
+                <table id = "multiTable">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Square Footage</th>
+                            <th>Number of Bathrooms</th>
+                            <th>Average School Rating</th>
+                            <th>Number of Bedrooms</th>
+                            <th>Number of High Schools</th>
+                            <th>Median Students Per Teacher</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%if d %}
+                        {% for i in d %}
+                            <tr>
+                                <td>{{i.index}}</td>
+                                <td>{{i.livingAreaSqFt}}</td>
+                                <td>{{i.numOfBathrooms}}</td>
+                                <td>{{i.avgSchoolRating}}</td>
+                                <td>{{i.numOfBedrooms}}</td>
+                                <td>{{i.numOfHighSchools}}</td>
+                                <td>{{i.MedianStudentsPerTeacher}}</td>
+                                <!-- This button will fill the selected data section with the chosen data -->
+                                <td style = ""><button id = "btn{{i.index}}" value = "{{i.index}}|{{i.livingAreaSqFt}}|{{i.numOfBathrooms}}|{{i.avgSchoolRating}}|{{i.numOfBedrooms}}|{{i.numOfHighSchools}}|{{i.MedianStudentsPerTeacher}}">Choose</button></td>
+                            </tr>
+                        {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            <br />
+            <form action = "{% url 'neuralResults' %}">
+                <!-- This table will display the selected data that will be sent to the model -->
+                <table>
+                    <tr>
+                        <td>Index</td>
+                        <td>
+                            <input id="index" readonly type="text" required name="INDEX"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>House Square Footage</td>
+                        <td>
+                            <input id="sqft" readonly type="text" required name="SQFT"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Bathrooms</td>
+                        <td>
+                            <input id="bathrooms" readonly type="text" required name="BATHROOMS"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Average School Rating</td>
+                        <td>
+                            <input id="schoolRating" readonly type="text" required name="SCHOOLRATING"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Bedrooms</td>
+                        <td>
+                            <input id="bedrooms" readonly type="text" required name="BEDROOMS"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of High Schools</td>
+                        <td>
+                            <input id="highschools" readonly type="text" required name="HIGHSCHOOLS"> <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Median Students Per Teacher</td>
+                        <td>
+                            <input id="teachers" readonly type="text" required name="TEACHERS"> <br/><br/>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="submit">
+            </form>
+            <script>
+                {% if d %}
+                {% for i in d %}
+                    tempButton = document.getElementById("btn{{i.index}}");
+                    tempButton.addEventListener('click', chooseButton);
+                {% endfor %}
+                {% endif %}
+    
+                function chooseButton(event)
+                {
+                    var d = event.target.attributes.value.nodeValue;
+                    value = d.split('|');
+                    var index = document.getElementById("index");
+                    index.value = value[0];
+                    var rd = document.getElementById("sqft");
+                    rd.value = value[1];
+                    var bathroom = document.getElementById("bathrooms");
+                    bathroom.value = value[2];
+                    var schoolRating = document.getElementById("schoolRating");
+                    schoolRating.value = value[3];
+                    var bedrooms = document.getElementById("bedrooms");
+                    bedrooms.value = value[4];
+                    var highschools = document.getElementById("highschools");
+                    highschools.value = value[5];
+                    var teachers = document.getElementById("teachers");
+                    teachers.value = value[6];
+                }
+            </script>
+            </div>
+        </div>
+    </body>
+</html>
