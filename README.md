@@ -27,8 +27,8 @@ The models used for the application were stored in the [Application/ApplicationP
 - [Simple Linear Regression Model Generation](https://github.com/xychen26/ECS171GroupProject/blob/main/Application/ApplicationProject/ApplicationServer/ModelFiles/GenerateLinearModel.ipynb)
 - [Multiple Linear Regression Model Generation](https://github.com/xychen26/ECS171GroupProject/blob/main/Application/ApplicationProject/ApplicationServer/ModelFiles/GenereateMultiLinearModel.ipynb)
 - [Polynomial Regression Model Generation](https://github.com/xychen26/ECS171GroupProject/blob/main/Application/ApplicationProject/ApplicationServer/ModelFiles/GeneratePolyModel.ipynb)
-- [Neural Network Model Generation **PLACEHOLDER**](PLACEHOLDER)
-- Model save files were named _LinearModel.sav_, _multi_lin_model.sav_, and _PolyModel**X**.sav_ where **X** is the degree of the polynomial model from 2 through 10.
+- [Neural Network Model Generation](https://github.com/xychen26/ECS171GroupProject/blob/main/Application/ApplicationProject/ApplicationServer/ModelFiles/GenerateNNmodel.ipynb)
+- Model save files were named _NN_model.sav_, _LinearModel.sav_, _multi_lin_model.sav_, and _PolyModel**X**.sav_ where **X** is the degree of the polynomial model from 2 through 10.
 - Scaler, X, and y test files are also included in the folder.
 
 ### Application Citations
