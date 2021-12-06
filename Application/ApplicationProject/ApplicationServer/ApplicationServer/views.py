@@ -2,6 +2,7 @@ from django.shortcuts import render
 import joblib
 import pandas as pd
 import json
+import tensorflow as tf
 from sklearn.preprocessing import PolynomialFeatures
 
 # Return the home html page when requested. There are no parameters that need to be passed as context.
