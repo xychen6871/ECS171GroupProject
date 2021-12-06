@@ -1,4 +1,4 @@
-# ECS 171 Group 2 Project Source Guide - TODO: FIX PLACEHOLDER VALUES ONCE THE REAL FILES HAVE BEEN DETERMINED
+# ECS 171 Group 2 Project Source Guide
 
 ## Report
 
