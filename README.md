@@ -14,7 +14,7 @@ Parts of our report used data and code from the following sources:
 
 ## Application
 
-Our application's main folder can be found at [Application/ApplicationProject/ApplicationServer/](https://github.com/xychen26/ECS171GroupProject/tree/main/Application/ApplicationProject/ApplicationServer)
+Our application's main folder can be found at [Application/ApplicationProject/ApplicationServer/](https://github.com/xychen26/ECS171GroupProject/tree/main/Application/ApplicationProject/ApplicationServer). It was developed using the "django-admin startproject" command to create template.
 
 To run it, please ensure that you have the following dependencies: 
 - Anaconda
