@@ -23,6 +23,8 @@ To run it, please ensure that you have the following dependencies:
 
 In the application's main folder, open the anaconda prompt and use the following command "_python manage.py runserver_". Then go to http://localhost:8000/ in an internet browser (or whichever port the server is running on) to see our models in action.
 
+The code in our application that uses our models can be found at [Application/ApplicationProject/ApplicationServer/ApplicationServer/views.py](https://github.com/xychen26/ECS171GroupProject/blob/main/Application/ApplicationProject/ApplicationServer/ApplicationServer/views.py)
+
 The models used for the application were stored in the [Application/ApplicationProject/ApplicationServer/ModelFiles](https://github.com/xychen26/ECS171GroupProject/tree/main/Application/ApplicationProject/ApplicationServer/ModelFiles) folder as well as the code used to generate the save files.
 - [Simple Linear Regression Model Generation](https://github.com/xychen26/ECS171GroupProject/blob/main/Application/ApplicationProject/ApplicationServer/ModelFiles/GenerateLinearModel.ipynb)
 - [Multiple Linear Regression Model Generation](https://github.com/xychen26/ECS171GroupProject/blob/main/Application/ApplicationProject/ApplicationServer/ModelFiles/GenereateMultiLinearModel.ipynb)
